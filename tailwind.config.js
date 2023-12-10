@@ -19,9 +19,9 @@ module.exports = {
         "light-theme": {
           "primary": "#a991f7",
           "secondary": "#f6d860",
-          "accent": "#37cdbe",
+          "accent": "#ffffff",
           "neutral": "#3d4451",
-          "base-100": "#ffffff",
+          "base-100": "#0f0f0f",
         },
       },
 
