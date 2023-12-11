@@ -6,3 +6,15 @@
 .menu {
     font-size: 18px;
 }
+
+.menu li {
+    border-radius: 0.15rem;
+}
+
+.menu-option-dark-mode:hover {
+    color: #e2a53f;
+}
+
+.menu-option-light-mode:hover {
+    background-color: rgb(240, 240, 240);
+}
