@@ -1,20 +1,22 @@
 .logo-text {
-    font-size: 24px;
     font-family: 'Lobster', sans-serif;
 }
 
-.menu {
-    font-size: 18px;
+.nav-center-dark-mode a:hover {
+    color: #e2a53f
 }
 
-.menu li {
-    border-radius: 0.15rem;
+.nav-center-light-mode a:hover {
+    border-bottom: 1px solid black;
+    animation: nav-link-animation 0.5s linear 0s 1;
 }
 
-.menu-option-dark-mode:hover {
-    color: #e2a53f;
-}
+@keyframes nav-link-animation {
+    0% {
+        border-image: linear-gradient(to right, black 0%, transparent 100%) 100% 1;
+    }
 
-.menu-option-light-mode:hover {
-    background-color: rgb(240, 240, 240);
+    100% {
+        border-image: linear-gradient(to right, black 100%, transparent 0%) 100% 1;
+    }
 }
