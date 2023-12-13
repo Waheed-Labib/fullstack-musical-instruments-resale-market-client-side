@@ -2,8 +2,9 @@
     font-family: 'Lobster', sans-serif;
 }
 
-.nav-center-dark-mode a:hover {
-    color: #e2a53f
+.nav-center-dark-mode a:hover,
+.nav-dropdown-light-mode a:hover {
+    color: #e2a53f;
 }
 
 .nav-center-light-mode a:hover {
@@ -19,4 +20,22 @@
     100% {
         border-image: linear-gradient(to right, black 100%, transparent 0%) 100% 1;
     }
+}
+
+.nav-dropdown-dark-mode div:hover {
+    background-color: #e8e8e8;
+}
+
+.nav-dropdown-dark-mode a:hover {
+    color: #0f0f0f;
+}
+
+.user-dropdown-content,
+.catalog-dropdown-content {
+    display: none;
+}
+
+.user-dropdown:hover .user-dropdown-content,
+.catalog-dropdown:hover .catalog-dropdown-content {
+    display: block;
 }
