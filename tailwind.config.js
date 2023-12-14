@@ -20,7 +20,7 @@ module.exports = {
           "primary": "#e2a53f",
           "secondary": "#f6d860",
           "accent": "#ffffff",
-          "neutral": "#3d4451",
+          "neutral": "#800000",
           "base-100": "#0f0f0f",
         },
       },

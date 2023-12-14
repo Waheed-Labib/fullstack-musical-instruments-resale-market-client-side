@@ -1,0 +1,42 @@
+.footer {
+    background-image: url(/src/assets/images/footer/footer-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-content-dark-mode {
+    background: linear-gradient(to top, #0f0f0fe6, #0f0f0ff6, #0f0f0fef, #0f0f0f);
+}
+
+.footer-content-light-mode {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.677), rgba(255, 255, 255, 0.808), rgba(255, 255, 255, 0.927), white);
+}
+
+.footer-content h2 {
+    font-family: 'ZCOOL XiaoWei', sans-serif;
+}
+
+.social-link {
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: 0.2s;
+}
+
+.social-link-dark-mode {
+    border: 1px solid white;
+}
+
+.social-link-dark-mode:hover {
+    color: #e2a53f;
+    border: 1px solid #e2a53f;
+}
+
+.social-link-light-mode {
+    border: 1px solid #0f0f0f;
+}
+
+.social-link-light-mode:hover {
+    color: #800000;
+    border: 1px solid #800000;
+}
