@@ -1,9 +1,10 @@
 import React from 'react';
+import Slider from '../Slider/Slider';
 
 const Home = () => {
     return (
         <div className='text-center min-h-screen'>
-            <h2 className='text-4xl'>Home page</h2>
+            <Slider></Slider>
         </div>
     );
 };

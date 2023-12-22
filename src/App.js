@@ -11,11 +11,11 @@ function App() {
     <>
       {
         mode === 'dark' ?
-          <div data-theme="dark-theme" className='App bg-accent text-base-100 min-h-screen'>
+          <div data-theme="dark-theme" className='App bg-accent text-base-100 min-h-screen w-full'>
             <RouterProvider router={routes}></RouterProvider>
           </div>
           :
-          <div data-theme="light-theme" className='App bg-accent text-base-100 min-h-screen'>
+          <div data-theme="light-theme" className='App bg-accent text-base-100 min-h-screen w-full'>
             <RouterProvider router={routes}></RouterProvider>
           </div>
       }

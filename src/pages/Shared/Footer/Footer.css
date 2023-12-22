@@ -20,7 +20,7 @@
 .social-link {
     border-radius: 50%;
     padding: 0.5rem;
-    transition: 0.2s;
+    /* transition: 0.2s; */
 }
 
 .social-link-dark-mode {

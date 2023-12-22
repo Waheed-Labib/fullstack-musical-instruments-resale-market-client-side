@@ -7,9 +7,19 @@
     color: #e2a53f;
 }
 
-.nav-dropdown-dark-mode a:hover {
-    color: #800000;
+.nav-dropdown-dark-mode a {
+    color: black;
+}
 
+.nav-dropdown-dark-mode a:hover {
+    /* color: #800000; */
+    color: black;
+    font-weight: 600;
+}
+
+.catalog-dropdown-content a,
+.user-dropdown-content a {
+    transition: 0.2s;
 }
 
 .nav-center-light-mode a:hover {
@@ -36,3 +46,5 @@
 .catalog-dropdown:hover .catalog-dropdown-content {
     display: block;
 }
+
+.medium-and-small-device-menubar {}

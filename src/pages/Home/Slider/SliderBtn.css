@@ -1,0 +1,13 @@
+.active-slider-btn {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgba(97, 81, 49, 0.9);
+}
+
+.disabled-slider-btn {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #e2a53f;
+}
