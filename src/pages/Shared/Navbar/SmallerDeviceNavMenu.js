@@ -106,7 +106,7 @@ const SmallerDeviceNavMenu = () => {
             </div>
             {
                 menuOpen &&
-                <div onClick={() => setMenuOpen(false)} className='medium-and-small-device-menubar fixed top-0 right-0 w-full text-accent h-screen z-10 flex justify-end'>
+                <div onClick={() => setMenuOpen(false)} className='medium-and-small-device-menubar fixed top-0 right-0 w-full text-accent h-screen z-20 flex justify-end'>
 
                     <div onClick={e => e.stopPropagation()} className='w-3/5 md:w-1/3 bg-base-100 h-screen'>
                         {
