@@ -1,13 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts/ThemeProvider/ThemeProvider';
-import { MdMenu } from 'react-icons/md';
-import { CiMenuFries } from "react-icons/ci";
+import SmallerDeviceNavMenu from './SmallerDeviceNavMenu';
 
 const NavMenu = () => {
     const { mode } = useContext(ThemeContext)
-    const [menuOpen, setMenuOpen] = useState(false)
 
     return (
         <>
@@ -49,54 +47,7 @@ const NavMenu = () => {
 
             </div>
 
-            {/* medium and small device dropdown */}
-            <div className='lg:hidden mt-5'>
-                <div onClick={() => setMenuOpen(!menuOpen)} className='flex items-center gap-2'>
-                    {
-                        menuOpen ?
-                            <CiMenuFries></CiMenuFries>
-                            :
-                            <MdMenu></MdMenu>
-                    }
-
-                    <p className='hidden sm:block'>Menu</p>
-                </div>
-
-                {
-                    menuOpen &&
-                    <div className='medium-and-small-device-menubar fixed top-0 right-0 w-1/2 sm:w-1/3 bg-base-100 text-accent h-screen z-10'>
-
-                        <div>
-                            <p>X</p>
-                        </div>
-
-                        <hr></hr>
-
-                        <div>
-                            <Link to='/'>Home</Link>
-                        </div>
-
-                        <hr></hr>
-
-                        <div>
-                            <p>Dashboard</p>
-                        </div>
-
-                        <hr></hr>
-
-                        <div>
-                            <Link>Catalog</Link>
-                        </div>
-
-                        <hr></hr>
-
-                        <div>
-                            <Link to='/blog'>Blog</Link>
-                        </div>
-                    </div>
-                }
-
-            </div>
+            <SmallerDeviceNavMenu></SmallerDeviceNavMenu>
         </>
     );
 };

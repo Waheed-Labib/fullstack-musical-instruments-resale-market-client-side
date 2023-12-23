@@ -3,7 +3,9 @@
 }
 
 .nav-center-dark-mode a:hover,
-.nav-dropdown-light-mode a:hover {
+.nav-dropdown-light-mode a:hover,
+.menubar-open-btn-dark-mode:hover,
+.menubar-option-light-mode:hover {
     color: #e2a53f;
 }
 
@@ -11,8 +13,8 @@
     color: black;
 }
 
-.nav-dropdown-dark-mode a:hover {
-    /* color: #800000; */
+.nav-dropdown-dark-mode a:hover,
+.menubar-option-dark-mode:hover {
     color: black;
     font-weight: 600;
 }
@@ -22,7 +24,8 @@
     transition: 0.2s;
 }
 
-.nav-center-light-mode a:hover {
+.nav-center-light-mode a:hover,
+.menubar-open-btn-light-mode:hover p {
     border-bottom: 1px solid black;
     animation: nav-link-animation 0.5s linear 0s 1;
 }

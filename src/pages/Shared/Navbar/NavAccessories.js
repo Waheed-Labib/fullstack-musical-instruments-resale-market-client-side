@@ -5,14 +5,11 @@ import { RiArrowDropDownLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { IoSunny } from 'react-icons/io5';
 import { MdDarkMode } from 'react-icons/md';
+import ModeToggleOption from './ModeToggleOption';
 
 const NavAccessories = () => {
 
-    const { mode, setMode } = useContext(ThemeContext);
-
-    useEffect(() => {
-        localStorage.setItem('classica-theme', mode)
-    }, [mode])
+    const { mode } = useContext(ThemeContext);
 
     return (
         <div className='hidden sm:flex items-start justify-end gap-5 lg:gap-10 mt-6 md:mt-4'>
@@ -39,18 +36,9 @@ const NavAccessories = () => {
             </div>
 
 
-            <>
-                {
-                    mode === 'dark' ?
-                        <div className='hover:text-primary' onClick={() => setMode('light')}>
-                            <IoSunny></IoSunny>
-                        </div>
-                        :
-                        <div className='mt-1' onClick={() => setMode('dark')}>
-                            <MdDarkMode></MdDarkMode>
-                        </div>
-                }
-            </>
+            <div className={`mt-1 ${mode === 'dark' && 'hover:text-primary'}`}>
+                <ModeToggleOption></ModeToggleOption>
+            </div>
 
         </div>
     );
