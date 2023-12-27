@@ -7,7 +7,7 @@ const NavLogo = () => {
         <div>
             <Link to='/' className="flex items-center gap-1 text-3xl mt-2" >
                 <GiMusicalScore></GiMusicalScore>
-                <p className='ml-2 logo-text font-thin text-4xl'>Classica</p>
+                <p className='ml-2 logo-text font-thin text-4xl font-lobster'>Classica</p>
             </Link >
         </div>
     );

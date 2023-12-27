@@ -12,7 +12,7 @@ const NavAccessories = () => {
     const { mode } = useContext(ThemeContext);
 
     return (
-        <div className='hidden sm:flex items-start justify-end gap-5 lg:gap-10 mt-6 md:mt-4'>
+        <div className='hidden sm:flex items-start justify-end gap-5 lg:gap-6 mt-6 md:mt-4'>
 
             <div className='user-dropdown flex flex-col items-center w-12'>
                 <div className='flex items-center'>

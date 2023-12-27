@@ -11,9 +11,9 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <div className='footer h-[460px]'>
-            <div className={`footer-content footer-content-${mode}-mode h-[460px] w-full flex flex-col gap-16 items-center justify-center`}>
-                <h2 className='text-center text-5xl font-medium'>FOLLOW US ON SOCIAL MEDIA</h2>
+        <div className='footer h-[460px] mt-12'>
+            <div className={`footer-content footer-content-${mode}-mode h-[460px] w-full flex flex-col gap-12 items-center justify-center`}>
+                <h2 className='text-center text-4xl font-medium'>FOLLOW US ON SOCIAL MEDIA</h2>
                 <div className='flex gap-12 text-lg'>
 
                     <Link className={`social-link social-link-${mode}-mode`}>
