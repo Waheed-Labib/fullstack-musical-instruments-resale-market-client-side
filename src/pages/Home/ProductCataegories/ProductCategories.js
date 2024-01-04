@@ -3,6 +3,7 @@ import CategoryCard from './CategoryCard';
 import SortBy from './SortBy';
 import SearchBar from './SearchBar';
 import { useQuery } from '@tanstack/react-query';
+import Filter from './Filter';
 
 const ProductCategories = () => {
 
@@ -24,8 +25,9 @@ const ProductCategories = () => {
         <div className='mt-28'>
             <h2 className='text-4xl font-zcool'>Product Categories</h2>
 
-            <div className='flex justify-between items-center px-16 mt-12'>
+            <div className='flex justify-between items-start px-16 mt-12'>
                 <SortBy setSortBy={setSortBy}></SortBy>
+                <Filter></Filter>
                 <SearchBar></SearchBar>
             </div>
 
