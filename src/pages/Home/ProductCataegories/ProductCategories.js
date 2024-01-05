@@ -8,19 +8,21 @@ import Filter from './Filter';
 const ProductCategories = () => {
 
     const [sortBy, setSortBy] = useState('name');
-    const [filterOptions, setFilterOptions] = useState([]);
+    const [areaFilter, setAreaFilter] = useState('all');
+    const [typeFilter, setTypeFilter] = useState('all');
+    const [searchCategory, setSearchCategory] = useState('');
     const [categories, setCategories] = useState([])
     const [isCategoriesLoading, setIsCategoriesLoading] = useState(true);
 
     useEffect(() => {
         setIsCategoriesLoading(true);
-        fetch(`http://localhost:5000/categories?sortBy=${sortBy}`)
+        fetch(`http://localhost:5000/categories?sortBy=${sortBy}&area=${areaFilter}&type=${typeFilter}&search=${searchCategory}`)
             .then(res => res.json())
             .then(data => {
                 setCategories(data)
                 setIsCategoriesLoading(false)
             })
-    }, [sortBy, filterOptions])
+    }, [sortBy, areaFilter, typeFilter, searchCategory])
 
     return (
         <div className='mt-28'>
@@ -29,9 +31,15 @@ const ProductCategories = () => {
             <div className='flex justify-between items-start px-16 mt-12'>
                 <div className='flex flex-col gap-6'>
                     <SortBy setSortBy={setSortBy}></SortBy>
-                    <SearchBar></SearchBar>
+                    <SearchBar searchCategory={searchCategory} setSearchCategory={setSearchCategory}></SearchBar>
                 </div>
-                <Filter setFilterOptions={setFilterOptions}></Filter>
+                {
+                    searchCategory ?
+                        <p onClick={() => setSearchCategory('')} className='rounded-[50%] w-8 h-8 bg-base-100 text-accent p-1 hover:cursor-pointer'>X</p>
+                        :
+                        <Filter setAreaFilter={setAreaFilter} setTypeFilter={setTypeFilter}></Filter>
+                }
+
             </div>
 
             {
