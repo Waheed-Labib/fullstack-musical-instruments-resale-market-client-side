@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import CategoryCard from './CategoryCard';
 import SortBy from './SortBy';
 import SearchBar from './SearchBar';
-import { useQuery } from '@tanstack/react-query';
 import Filter from './Filter';
+import Loading from '../../../components/Loading/Loading';
+import NothingToShow from '../../../components/NothingToShow/NothingToShow';
 
 const ProductCategories = () => {
 
@@ -13,6 +14,14 @@ const ProductCategories = () => {
     const [searchCategory, setSearchCategory] = useState('');
     const [categories, setCategories] = useState([])
     const [isCategoriesLoading, setIsCategoriesLoading] = useState(true);
+
+    const handleCancelSearch = () => {
+        setSearchCategory('')
+
+        // to erase previous filters and show all categories
+        setAreaFilter('')
+        setTypeFilter('')
+    }
 
     useEffect(() => {
         setIsCategoriesLoading(true);
@@ -31,11 +40,11 @@ const ProductCategories = () => {
             <div className='flex justify-between items-start px-16 mt-12'>
                 <div className='flex flex-col gap-6'>
                     <SortBy setSortBy={setSortBy}></SortBy>
-                    <SearchBar searchCategory={searchCategory} setSearchCategory={setSearchCategory}></SearchBar>
+                    <SearchBar searchCategory={searchCategory} setSearchCategory={setSearchCategory} setAreaFilter={setAreaFilter} setTypeFilter={setTypeFilter}></SearchBar>
                 </div>
                 {
                     searchCategory ?
-                        <p onClick={() => setSearchCategory('')} className='rounded-[50%] w-8 h-8 bg-base-100 text-accent p-1 hover:cursor-pointer'>X</p>
+                        <p onClick={handleCancelSearch} className='rounded-[50%] w-8 h-8 bg-base-100 text-accent p-1 hover:cursor-pointer'>X</p>
                         :
                         <Filter setAreaFilter={setAreaFilter} setTypeFilter={setTypeFilter}></Filter>
                 }
@@ -44,13 +53,23 @@ const ProductCategories = () => {
 
             {
                 isCategoriesLoading ?
-                    <div>Loading ...</div>
+                    <Loading></Loading>
                     :
-                    <div className='mt-12 grid grid-cols-4 gap-0'>
+                    <>
                         {
-                            categories.map(category => <CategoryCard key={category._id} category={category}></CategoryCard>)
+                            categories.length ?
+                                <div className='mt-12 grid grid-cols-4 gap-0'>
+                                    {
+                                        categories.map(category => <CategoryCard key={category._id} category={category}></CategoryCard>)
+                                    }
+
+                                </div>
+                                :
+                                <NothingToShow></NothingToShow>
                         }
-                    </div>
+                    </>
+
+
             }
 
         </div>
