@@ -1,10 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/ThemeProvider/ThemeProvider';
 import { FaUser } from 'react-icons/fa';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import { IoSunny } from 'react-icons/io5';
-import { MdDarkMode } from 'react-icons/md';
 import ModeToggleOption from './ModeToggleOption';
 
 const NavAccessories = () => {
@@ -36,7 +34,7 @@ const NavAccessories = () => {
             </div>
 
 
-            <div className={`mt-1 ${mode === 'dark' && 'hover:text-primary'}`}>
+            <div className={`${mode === 'dark' && 'hover:text-primary'}`}>
                 <ModeToggleOption></ModeToggleOption>
             </div>
 

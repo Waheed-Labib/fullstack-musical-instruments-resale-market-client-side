@@ -1,23 +1,20 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/ThemeProvider/ThemeProvider';
-import { IoSunny } from 'react-icons/io5';
-import { MdDarkMode } from 'react-icons/md';
+import { IoSunny } from "react-icons/io5";
+import { LuMoon } from "react-icons/lu";
 
 const ModeToggleOption = () => {
     const { mode, setMode } = useContext(ThemeContext)
     return (
-        <div className='hover:cursor-pointer'>
+        <>
             {
                 mode === 'dark' ?
-                    <div onClick={() => setMode('light')}>
-                        <IoSunny></IoSunny>
-                    </div>
+                    <IoSunny onClick={() => setMode('light')}></IoSunny>
                     :
-                    <div onClick={() => setMode('dark')}>
-                        <MdDarkMode></MdDarkMode>
-                    </div>
+                    <LuMoon onClick={() => setMode('dark')}></LuMoon>
             }
-        </div>
+        </>
+
     );
 };
 

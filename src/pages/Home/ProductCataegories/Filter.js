@@ -1,53 +1,87 @@
-import React, { useState } from 'react';
-import { FaAngleDown } from "react-icons/fa6";
+import React from 'react';
 
-const Filter = () => {
-    const [addingFilter, setAddingFilter] = useState(false)
+const Filter = ({ setFilterOptions }) => {
+
     return (
-        <div className={`text-sm flex ${addingFilter ? 'items-start' : 'items-center'} gap-3`}>
-            <p>Filter</p>
-            {
-                addingFilter ?
-                    <form>
-                        <div className='flex items-center gap-2'>
-                            <input type='checkbox'></input>
-                            <p>Asian</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <input type='checkbox'></input>
-                            <p>Western</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <input type='checkbox'></input>
-                            <p>Mixed Origin</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <input type='checkbox'></input>
-                            <p>Stringed</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <input type='checkbox'></input>
-                            <p>Percussion</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <input type='checkbox'></input>
-                            <p>Wind</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <input type='checkbox'></input>
-                            <p>Keyboard</p>
-                        </div>
+        <div className='mt-3 w-1/2'>
+            <div className='flex flex-wrap items-center justify-between mb-3'>
+                <p className='text-start font-semibold'>Area : </p>
 
-                        <input className='btn btn-xs btn-primary w-full rounded-sm my-1 font-semibold' type='submit' value='Done'></input>
-                        <br></br>
-                        <input className='btn btn-xs btn-secondary w-full rounded-sm my-1 font-semibold' type='reset' value='Show All'></input>
-                    </form>
-                    :
-                    <div onClick={() => setAddingFilter(true)} className='border rounded p-1 ps-4 flex items-center gap-2 hover:cursor-pointer'>
-                        <p>All</p>
-                        <FaAngleDown></FaAngleDown>
-                    </div>
-            }
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-area" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Asian</span>
+                    </label>
+                </div>
+
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-area" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Western</span>
+
+                    </label>
+                </div>
+
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-area" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Mixed Origin</span>
+
+                    </label>
+                </div>
+
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-area" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Show All</span>
+
+                    </label>
+                </div>
+
+
+            </div>
+
+            <div className='flex flex-wrap items-center justify-between'>
+                <p className='text-start font-semibold'>Instrument Type : </p>
+
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-type" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Percussion</span>
+
+                    </label>
+                </div>
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-type" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Stringed</span>
+
+                    </label>
+                </div>
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-type" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Wind</span>
+
+                    </label>
+                </div>
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-type" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Keyboard</span>
+
+                    </label>
+                </div>
+
+                <div className="form-control">
+                    <label className="label justify-start gap-2 cursor-pointer">
+                        <input type="radio" name="radio-type" className="radio h-4 w-4 border-base-100 checked:bg-accent" checked />
+                        <span className="label-text text-base-100">Show All</span>
+
+                    </label>
+                </div>
+            </div>
+
         </div>
     );
 };

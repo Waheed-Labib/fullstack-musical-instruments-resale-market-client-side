@@ -9,7 +9,7 @@ const SortBy = ({ setSortBy, refetch }) => {
 
     return (
         <div className='text-sm flex items-center gap-3'>
-            <p>Sort By</p>
+            <p className=''>Sort By : </p>
             <select onChange={handleSortByOptionChange} className='bg-accent border rounded p-[2px] hover:cursor-pointer'>
                 <option>name</option>
                 <option>type</option>
