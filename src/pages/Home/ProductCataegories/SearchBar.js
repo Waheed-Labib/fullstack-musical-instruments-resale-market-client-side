@@ -13,8 +13,8 @@ const SearchBar = ({ searchCategory, setSearchCategory, setAreaFilter, setTypeFi
 
     return (
         <form onSubmit={event => event.preventDefault()}>
-            <input onChange={handleSearchCategoriesChange} className='bg-accent border border-secondary rounded hover:cursor-pointer w-64 p-2 px-4 mr-3' type='text' placeholder='Search a Category' value={searchCategory}></input>
-            <input type='submit' value='Search' className='p-[9px] px-4 bg-primary rounded text-white font-medium hover:bg-[#bf8f3c]'></input>
+            <input onChange={handleSearchCategoriesChange} className='bg-accent border border-secondary rounded hover:cursor-pointer w-72 p-4 mr-3' type='text' placeholder='Search a Category' value={searchCategory}></input>
+            <input type='submit' value='Search' className='p-4 bg-primary rounded text-white font-medium hover:bg-[#bf8f3c]'></input>
         </form>
     );
 };
