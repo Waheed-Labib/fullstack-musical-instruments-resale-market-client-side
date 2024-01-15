@@ -1,12 +1,13 @@
 import React from 'react';
+import FilterStatement from './FilterStatement';
 
-const Filter = ({ setRegionFilter, setTypeFilter }) => {
+const Filter = ({ regionFilter, typeFilter, setRegionFilter, setTypeFilter, searchFieldValue }) => {
 
     return (
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-3 items-start'>
             <div className='text-sm flex items-center gap-3'>
                 <p className='text-start bg-primary text-accent p-[6px] rounded-sm w-48'>Type of Instruments :</p>
-                <select onChange={event => setTypeFilter(event.target.value)} className='bg-accent border rounded p-[2px] hover:cursor-pointer w-48'>
+                <select onChange={event => setTypeFilter(event.target.value)} className='bg-accent border rounded p-[2px]  w-48'>
                     <option>Show All</option>
                     <option>Percussion</option>
                     <option>Stringed</option>
@@ -17,7 +18,7 @@ const Filter = ({ setRegionFilter, setTypeFilter }) => {
 
             <div className='text-sm flex items-center gap-3'>
                 <p className='text-start bg-primary text-accent p-[6px] rounded-sm w-48'>Regional Instruments :</p>
-                <select onChange={event => setRegionFilter(event.target.value)} className='bg-accent border rounded p-[2px] hover:cursor-pointer w-48'>
+                <select onChange={event => setRegionFilter(event.target.value)} className='bg-accent border rounded p-[2px]  w-48'>
                     <option>Show All</option>
                     <option>Asian Instruments</option>
                     <option>Western Instruments</option>
@@ -25,7 +26,8 @@ const Filter = ({ setRegionFilter, setTypeFilter }) => {
                 </select>
             </div>
 
-        </div>
+            <FilterStatement typeFilter={typeFilter} regionFilter={regionFilter} searchFieldValue={searchFieldValue}></FilterStatement>
+        </div >
     );
 };
 

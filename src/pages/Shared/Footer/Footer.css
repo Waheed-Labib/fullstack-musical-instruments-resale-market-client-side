@@ -10,7 +10,7 @@
 }
 
 .footer-content-light-mode {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.677), rgba(255, 255, 255, 0.808), rgba(255, 255, 255, 0.927), white);
+    background: linear-gradient(to top, #fafaf5d5, #fafaf5e4, #fafaf5ee, #fafaf5);
 }
 
 .footer-content h2 {

@@ -1,0 +1,14 @@
+.page-headline {
+    background-image: url(/src/assets/images/headline/page-headline.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page-headline-content-dark-mode {
+    background: linear-gradient(to top, #0f0f0fe6, #0f0f0ff6, #0f0f0fef, #0f0f0f);
+}
+
+.page-headline-content-light-mode {
+    background: linear-gradient(to top, #fafaf5d5, #fafaf5e4, #fafaf5ee, #fafaf5);
+}

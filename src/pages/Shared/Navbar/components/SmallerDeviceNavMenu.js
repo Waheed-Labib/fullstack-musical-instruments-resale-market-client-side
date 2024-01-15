@@ -3,7 +3,7 @@ import { CiMenuFries } from 'react-icons/ci';
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 import { MdMenu } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../../../contexts/ThemeProvider/ThemeProvider';
+import { ThemeContext } from '../../../../contexts/ThemeProvider/ThemeProvider';
 import ModeToggleOption from './ModeToggleOption';
 
 const SmallerDeviceNavMenu = () => {
@@ -19,32 +19,32 @@ const SmallerDeviceNavMenu = () => {
                 <ModeToggleOption></ModeToggleOption>
             </div>
 
-            <p onClick={() => setMenuOpen(false)} className={`menubar-option-${mode}-mode hover:cursor-pointer`}>x</p>
+            <p onClick={() => setMenuOpen(false)} className={`menubar-option-${mode}-mode `}>x</p>
         </div>
 
         <hr></hr>
 
-        <div className={`menubar-option-${mode}-mode hover:cursor-pointer p-3`}>
+        <div className={`menubar-option-${mode}-mode  p-3`}>
             <Link to='/'>Home</Link>
         </div>
 
         <hr></hr>
 
-        <div onClick={() => setViewDashboard(true)} className={`menubar-option-${mode}-mode hover:cursor-pointer p-3 flex justify-between items-center`}>
+        <div onClick={() => setViewDashboard(true)} className={`menubar-option-${mode}-mode  p-3 flex justify-between items-center`}>
             <p>Dashboard</p>
             <FaAngleRight></FaAngleRight>
         </div>
 
         <hr></hr>
 
-        <div onClick={() => setViewCatalog(true)} className={`menubar-option-${mode}-mode hover:cursor-pointer p-3 flex justify-between items-center`}>
+        <div onClick={() => setViewCatalog(true)} className={`menubar-option-${mode}-mode  p-3 flex justify-between items-center`}>
             <p>Catalog</p>
             <FaAngleRight></FaAngleRight>
         </div>
 
         <hr></hr>
 
-        <div className={`hover:cursor-pointer menubar-option-${mode}-mode p-3`}>
+        <div className={` menubar-option-${mode}-mode p-3`}>
             <Link to='/blog'>Blog</Link>
         </div>
     </>
@@ -55,19 +55,19 @@ const SmallerDeviceNavMenu = () => {
                 <FaAngleLeft></FaAngleLeft>
             </div>
 
-            <p onClick={() => setMenuOpen(false)} className={`menubar-option-${mode}-mode hover:cursor-pointer`}>x</p>
+            <p onClick={() => setMenuOpen(false)} className={`menubar-option-${mode}-mode `}>x</p>
         </div>
 
         <p className={`bg-primary text-black font-semibold p-3 my-2`}>Catalog</p>
 
         <Link to='/login'>
-            <p className={`menubar-option-${mode}-mode hover:cursor-pointer p-3`}>Login</p>
+            <p className={`menubar-option-${mode}-mode  p-3`}>Login</p>
         </Link>
 
         <hr className='border-[grey]'></hr>
 
         <Link to='/create-account'>
-            <p className={`menubar-option-${mode}-mode hover:cursor-pointer p-3`}>Create Account</p>
+            <p className={`menubar-option-${mode}-mode  p-3`}>Create Account</p>
         </Link>
     </>
 
@@ -76,25 +76,25 @@ const SmallerDeviceNavMenu = () => {
             <div onClick={() => setViewDashboard(false)} className={`menubar-option-${mode}-mode`}>
                 <FaAngleLeft></FaAngleLeft>
             </div>
-            <p onClick={() => setMenuOpen(false)} className={`menubar-option-${mode}-mode hover:cursor-pointer`}>x</p>
+            <p onClick={() => setMenuOpen(false)} className={`menubar-option-${mode}-mode `}>x</p>
         </div>
 
         <p className={`bg-primary text-black font-semibold p-3 my-2`}>Dashboard</p>
 
         <Link to='/login'>
-            <p className={`menubar-option-${mode}-mode hover:cursor-pointer p-3`}>Login</p>
+            <p className={`menubar-option-${mode}-mode  p-3`}>Login</p>
         </Link>
 
         <hr className='border-[grey]'></hr>
 
         <Link to='/create-account'>
-            <p className={`menubar-option-${mode}-mode hover:cursor-pointer p-3`}>Create Account</p>
+            <p className={`menubar-option-${mode}-mode  p-3`}>Create Account</p>
         </Link>
     </>
 
     return (
         <div className='lg:hidden mt-5'>
-            <div onClick={() => setMenuOpen(!menuOpen)} className={`flex items-center gap-2 hover:cursor-pointer menubar-open-btn-${mode}-mode`}>
+            <div onClick={() => setMenuOpen(!menuOpen)} className={`flex items-center gap-2  menubar-open-btn-${mode}-mode`}>
                 {
                     menuOpen ?
                         <CiMenuFries></CiMenuFries>

@@ -8,7 +8,7 @@ const NothingToShow = () => {
                 <TbMoodEmpty></TbMoodEmpty>
             </div>
 
-            <p className='text-2xl font-semibold'>Nothing to Show ...</p>
+            <p className='text-2xl font-semibold'>Nothing to Show</p>
 
         </div>
     );

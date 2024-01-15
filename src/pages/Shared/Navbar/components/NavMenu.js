@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../../../contexts/ThemeProvider/ThemeProvider';
+import { ThemeContext } from '../../../../contexts/ThemeProvider/ThemeProvider';
 import SmallerDeviceNavMenu from './SmallerDeviceNavMenu';
 
 const NavMenu = () => {
@@ -19,7 +19,7 @@ const NavMenu = () => {
 
                 {/* catalog option */}
                 <div className='catalog-dropdown flex flex-col items-center w-24'>
-                    <div className='flex items-center hover:cursor-pointer'>
+                    <div className='flex items-center '>
                         <p>Catalog</p>
                         <RiArrowDropDownLine className='text-2xl'></RiArrowDropDownLine>
                     </div>

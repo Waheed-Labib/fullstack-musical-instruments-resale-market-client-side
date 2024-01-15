@@ -1,8 +1,8 @@
 import React from 'react';
 import './Navbar.css';
-import NavLogo from './NavLogo';
-import NavMenu from './NavMenu';
-import NavAccessories from './NavAccessories';
+import NavLogo from './components/NavLogo';
+import NavMenu from './components/NavMenu';
+import NavAccessories from './components/NavAccessories';
 
 const Navbar = () => {
 

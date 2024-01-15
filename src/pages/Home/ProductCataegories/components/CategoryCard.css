@@ -1,0 +1,26 @@
+.category-card {
+    box-shadow: 1px 1px 2px #e2a53f;
+}
+
+.category-card-light-mode {
+    background-color: white;
+}
+
+.category-card-dark-mode:hover {
+    box-shadow: 2px 2px 5px orange;
+}
+
+.category-card-light-mode:hover {
+    border: none;
+    box-shadow: 2px 2px 10px #800000;
+}
+
+.category-card-light-mode:hover .font-zcool {
+    color: #800000;
+    font-weight: 500;
+}
+
+.category-card-dark-mode:hover .font-zcool {
+    color: orange;
+    font-weight: 500;
+}
