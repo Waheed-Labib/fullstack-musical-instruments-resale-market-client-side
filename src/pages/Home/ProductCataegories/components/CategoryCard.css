@@ -2,12 +2,18 @@
     box-shadow: 1px 1px 2px #e2a53f;
 }
 
-.category-card-light-mode {
-    background-color: white;
+.category-card img {
+    width: 75px;
+    height: 84px;
 }
 
-.category-card-dark-mode:hover {
-    box-shadow: 2px 2px 5px orange;
+.category-card:hover img {
+    width: 80px;
+    height: 96px;
+}
+
+.category-card-light-mode {
+    background-color: white;
 }
 
 .category-card-light-mode:hover {
@@ -18,6 +24,10 @@
 .category-card-light-mode:hover .font-zcool {
     color: #800000;
     font-weight: 500;
+}
+
+.category-card-dark-mode:hover {
+    box-shadow: 2px 2px 5px orange;
 }
 
 .category-card-dark-mode:hover .font-zcool {

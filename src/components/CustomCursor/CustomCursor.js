@@ -63,7 +63,7 @@ const CustomCursor = () => {
         <div>
             <div
                 id='cursor'
-                className={`${deviceType === 'touch' && 'hidden'} border-2 border-dotted ${mode === 'dark' ? 'border-black bg-white' : 'border-white bg-black'} ${isClicking && 'bg-gray-500'} opacity-20`}
+                className={`${deviceType === 'touch' && 'hidden'} custom-cursor-${mode}-mode ${isClicking && 'custom-cursor-clicking'}`}
             ></div>
         </div >
     );

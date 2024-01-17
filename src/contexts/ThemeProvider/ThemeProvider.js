@@ -5,7 +5,7 @@ export const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
 
-    const [mode, setMode] = useState(localStorage.getItem('classica-theme') || 'dark')
+    const [mode, setMode] = useState(localStorage.getItem('classica-theme') || 'light')
 
     const themeInfo = {
         mode,

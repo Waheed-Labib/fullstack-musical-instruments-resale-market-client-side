@@ -7,4 +7,19 @@
     pointer-events: none;
     transition: all 0.2s ease-out;
     z-index: 1000;
+    /* color: #979797; */
+}
+
+.custom-cursor-light-mode {
+    border: 2px dotted white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-cursor-dark-mode {
+    border: 2px dotted black;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-cursor-clicking {
+    background-color: rgba(128, 128, 128, 0.8);
 }
