@@ -6,7 +6,7 @@ import Loading from '../../../components/Loading/Loading';
 import NothingToShow from '../../../components/NothingToShow/NothingToShow';
 import CategoriesDiv from './components/CategoriesDiv';
 
-const ProductCategories = () => {
+const ProductCategories = ({ hideH2 }) => {
 
     const [sortBy, setSortBy] = useState('name');
     const [regionFilter, setRegionFilter] = useState('Show All');
@@ -35,7 +35,7 @@ const ProductCategories = () => {
 
     return (
         <div className='mt-28'>
-            <h2 className='text-4xl font-zcool'>Product Categories</h2>
+            <h2 className={`${hideH2 && 'hidden'} text-4xl font-zcool`}>Product Categories</h2>
 
             <div className='flex justify-center gap-8 items-start px-16 mt-12'>
 
@@ -59,7 +59,7 @@ const ProductCategories = () => {
 
                         {
                             searchFieldValue &&
-                            <button onClick={handleCancelSearch} className='btn btn-neutral btn-xs mt-5'>
+                            <button onClick={handleCancelSearch} className='btn btn-neutral btn-xs my-5'>
                                 Cancel Search
                                 <span className="border-l p-1">Esc</span>
                             </button>

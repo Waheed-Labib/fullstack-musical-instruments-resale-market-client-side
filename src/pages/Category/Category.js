@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PageHeadline from '../Shared/PageHeadline/PageHeadline';
 import usePageName from '../../hooks/usePageName';
 import { ThemeContext } from '../../contexts/ThemeProvider/ThemeProvider';
 import ProductCard from './ProductCard';
 import Pagination from '../../components/Pagination/Pagination';
-import { useQuery } from '@tanstack/react-query';
 import Loading from '../../components/Loading/Loading';
 
 const Category = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from '../Slider/Slider';
-import ProductCategories from '../ProductCataegories/ProductCategories';
+import ProductCategories from '../../Shared/ProductCataegories/ProductCategories';
 
 const Home = () => {
     return (

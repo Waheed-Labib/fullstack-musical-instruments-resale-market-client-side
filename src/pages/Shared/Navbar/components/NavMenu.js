@@ -1,11 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { ThemeContext } from '../../../../contexts/ThemeProvider/ThemeProvider';
 import SmallerDeviceNavMenu from './SmallerDeviceNavMenu';
+import Dropdown from '../../../../components/Dropdown/Dropdown';
 
 const NavMenu = () => {
-    const { mode } = useContext(ThemeContext)
+    const { mode } = useContext(ThemeContext);
+    const [selectedOption, setSelectedOption] = useState('');
+    const [showOptions, setShowOptions] = useState(false)
+
+    if (selectedOption === 'Login') return <Navigate to='/login'></Navigate>
+    if (selectedOption === 'Create Account') return <Navigate to='/create-account'></Navigate>
 
     return (
         <>
@@ -18,26 +24,13 @@ const NavMenu = () => {
                 </div>
 
                 {/* catalog option */}
-                <div className='catalog-dropdown flex flex-col items-center w-24'>
+                <div onMouseOver={() => setShowOptions(true)} onMouseLeave={() => setShowOptions(false)} className='flex flex-col items-center w-24'>
                     <div className='flex items-center '>
                         <p>Catalog</p>
                         <RiArrowDropDownLine className='text-2xl'></RiArrowDropDownLine>
                     </div>
 
-                    <div
-                        className={`mt-4 text-accent bg-base-100 p-4 rounded-lg text-base catalog-dropdown-content nav-dropdown-${mode}-mode w-32 z-50`}>
-
-                        <Link to='/login'>
-                            <p className='py-2'>Login</p>
-                        </Link>
-
-                        <hr className='border-[grey]'></hr>
-
-                        <Link to='/create-account'>
-                            <p className='py-2'>Create Account</p>
-                        </Link>
-
-                    </div>
+                    <Dropdown options={['Login', 'Create Account']} selectedOption={selectedOption} setSelectedOption={setSelectedOption} showOptions={showOptions} setShowOptions={setShowOptions}></Dropdown>
                 </div>
 
                 {/* blog option */}
